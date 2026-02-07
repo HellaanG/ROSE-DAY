@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Rose Day, babyyy 🌹</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <canvas id="fireworks"></canvas>
+
+  <div class="container">
+    <h1>Happy Rose Day, babyyy 🌹</h1>
+
+    <p id="message" class="fade-message">Tap the button for a surprise 💖</p>
+
+    <button onclick="nextMessage()">Tap for Surprise 💌</button>
+    <button onclick="toggleSong()" id="songBtn">Play Our Song 🎵</button>
+    <button onclick="askPassword()">Open Love Letter 🔐</button>
+
+    <audio id="music" loop></audio>
+  </div>
+
+  <!-- 🔐 Password Popup -->
+  <div id="passwordBox" class="overlay">
+    <div class="modal">
+      <h2>Enter Secret Password 🔐</h2>
+      <input type="password" id="passwordInput" placeholder="Our secret...">
+      <p id="passwordError" class="error"></p>
+
+      <button onclick="checkPassword()">Unlock 💖</button>
+      <button onclick="closePassword()">Cancel</button>
+
+      <button onclick="showPasswordClue()" style="margin-top: 10px; background:#FFD700; color:#000;">
+        💡 Need a Clue?
+      </button>
+    </div>
+  </div>
+
+  <!-- 💡 Password Clue -->
+  <div id="clueBox" class="overlay">
+    <div class="modal">
+      <h2>💡 Password Clue</h2>
+      <p>Think of a special date… 14th of the 9th month, 2024 😉</p>
+      <button onclick="closeClue()">Got it!</button>
+    </div>
+  </div>
+
+  <!-- 💌 Love Letter Popup -->
+  <div id="letterBox" class="letter-box">
+    <div class="letter-content">
+      <h2>My Rose Day Letter for You 🌹</h2>
+
+      <p> My chellow,
+        <br><br> Happy Rose Day, baby 🌹<br><br> 
+        If I could, I’d place a rose in your hands right now, one that carries every “I miss you,” every prayer, every soft smile I save just for you. Since distance stands between us, let this letter be my rose… simple, real and filled with my heart.
+        <br><br> 
+        You have this quiet way of making my days lighter, even from far away. Sometimes it’s your words, sometimes it’s your patience, sometimes it’s just knowing you’re there and being my safe place without even trying. Darling, you don’t just love me in big moments but you love me in the small, ordinary ones too. And that’s what makes it extraordinary.
+        <br><br> 
+        There are days I wish I could hear your laugh in the same room, feel your presence beside me when I’m tired or share the little things that don’t fit inside messages. But even in the waiting, you teach me something beautiful like how to love with faith, how to trust time and how to grow together even when miles try to test us.
+        <br><br> 
+        My boiler, thank you for choosing me every day, even when it’s hard. Thank you for being gentle with my heart for understanding my silences and for standing with me when words fall short. You make me feel seen, valued and safe to be myself. That’s a rare kind of love and I’ll never take it lightly.
+        <br><br> 
+        One day, the distance will become a memory we smile about. Until then, I’ll keep sending you my love in little pieces through prayers, late-night thoughts and letters like this. No matter how far you are, you’re always close to my heart.
+        <br><br> 
+        This Rose Day, I’m giving you my promise:
+        <br>
+         to wait with hope,
+        <br>
+         to love with patience,
+        <br>
+         and to keep choosing you again and again.
+        <br><br> 
+        Always yours,
+        <br> 
+        with all my love 🤍🌹 
+    </p>
+
+      <button onclick="closeLetter()">Close 💕</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
